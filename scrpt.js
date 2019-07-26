@@ -1,3 +1,4 @@
+/*A*/
 /*onload animation effects functions*/   
 function loadEffectAppear(){      
                 $( document ).ready(function() {
@@ -38,10 +39,85 @@ function loadEffectMulti(){
                 console.log("_____________________________");
 }
 
+function loadEffectSideToSide(){    
+    $( document ).ready(function() {
+        var effect_functions = ['2', '1', '0'];
+        var random_effect_functions = effect_functions[Math.floor(Math.random() * effect_functions.length)];
+        var choosen_one = random_effect_functions;
+
+        if(choosen_one == '1'){
+            $('#lone').animate({ left: "-=100" }, 2000 );
+            $('#ltwo').animate({ left: "-=800" }, 1000 );
+            $('#lthree').animate({ left: "-=600" }, 1500 );
+            $('#rone').animate({ left: "-=400" }, 2000 );
+            $('#rtwo').animate({ left: "-=400" }, 2500 );
+            $('#rthree').animate({ left: "-=300" }, 3000 );
+            console.log('effect 4 A');
+            console.log("_____________________________");
+        }else if(choosen_one == '0'){
+            $('#lone').animate({ right: "+=200" }, 500 );
+            $('#ltwo').animate({ right: "-=100" }, 1000 );
+            $('#lthree').animate({ right: "-=200" }, 1500 );
+            $('#rone').animate({ right: "+=200" }, 2000 );
+            $('#rtwo').animate({ right: "-=500" }, 1500 );
+            $('#rthree').animate({ right: "+=400" }, 2000 );
+            console.log('effect 4 B');
+            console.log("_____________________________");
+        }else if(choosen_one == '2'){
+            $('#lone').animate({ left: "-=700" }, 500 );
+            $('#ltwo').animate({ left: "-=300" }, 1000 );
+            $('#lthree').animate({ left: "+=450" }, 1500 );
+            $('#rone').animate({ right: "-=800" }, 2000 );
+            $('#rtwo').animate({ right: "-=850" }, 1500 );
+            $('#rthree').animate({ right: "-=800" }, 2000 );
+            console.log('effect 4 C');
+            console.log("_____________________________");
+        }
+    });   
+
+}
+
+function loadEffectTopToBottom(){      
+    $( document ).ready(function() {
+        var effect_functions = ['2', '1', '0'];
+        var random_effect_functions = effect_functions[Math.floor(Math.random() * effect_functions.length)];
+        var choosen_one = random_effect_functions;
+
+        if(choosen_one == '1'){
+            $('#lone').animate({ top: "-=200" }, 1500 );
+            $('#ltwo').animate({ top: "-=400" }, 1000 );
+            $('#lthree').animate({ top: "-=100" }, 1500 );
+            $('#rone').animate({ top: "-=400" }, 3000 );
+            $('#rtwo').animate({ top: "-=600" }, 2500 );
+            $('#rthree').animate({ top: "-=200" }, 3000 );
+            console.log('effect 5 A');
+            console.log("_____________________________");
+        }else if(choosen_one == '0'){
+            $('#lone').animate({ bottom: "-=200" }, 1500 );
+            $('#ltwo').animate({ bottom: "+=100" }, 1500 );
+            $('#lthree').animate({ bottom: "-=200" }, 1500 );
+            $('#rone').animate({ bottom: "+=100" }, 2000 );
+            $('#rtwo').animate({ bottom: "-=400" }, 2500 );
+            $('#rthree').animate({ bottom: "+=200" }, 3000 );
+            console.log('effect 5 B');
+            console.log("_____________________________");
+        }else if(choosen_one == '2'){
+            $('#lone').animate({ bottom: "-=200" }, 1500 );
+            $('#ltwo').animate({ bottom: "-=250" }, 1500 );
+            $('#lthree').animate({ bottom: "-=180" }, 1500 );
+            $('#rone').animate({ top: "-=650" }, 2000 );
+            $('#rtwo').animate({ top: "-=600" }, 2500 );
+            $('#rthree').animate({ top: "-=750" }, 3000 );
+            console.log('effect 5 C');
+            console.log("_____________________________");
+        }
+    });   
+
+}
 
 /*random selection of loaded function*/
 function loadRandEffect(){      
-    var effect_functions = ['2', '1', '0'];
+    var effect_functions = ['4', '3','2', '1', '0'];
     var random_effect_functions = effect_functions[Math.floor(Math.random() * effect_functions.length)];
     var choosen_one = random_effect_functions;
 
@@ -51,6 +127,10 @@ function loadRandEffect(){
             loadEffectMulti();
         }else if(choosen_one == '0'){
             loadEffectFadeIn();
+        }else if(choosen_one == '3'){
+            loadEffectSideToSide();
+        }else if(choosen_one == '4'){
+            loadEffectTopToBottom();
         }
 }
 
@@ -65,7 +145,7 @@ function loadRandEffect(){
 
 
 
-
+/*B*/
 /*Random color set on load for 6+1 elements*/
 function randColOnLoad(){
                 var colors = ['#957D95', '#FFC857', '#AA1155', '#274690', '#197278', '#E07A5F'];
@@ -107,7 +187,7 @@ function randColOnLoad(){
 
 
 
-
+/*C*/
 /*1-3 functions Random element width*/
 function randWidthAndPositiontOnLoad(){/*could be divided into three functions 1 - 3 = generating rand, unique selection of generated rand and sorting*/
     /*1 - generating six numbers by low and high interval, where the last variable is counted by the previous - has actually a mistake, need to modify*/
